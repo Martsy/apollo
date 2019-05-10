@@ -1,3 +1,8 @@
 class Mission < ApplicationRecord
-  validates_presence_of :title, :time_in_space
+  has_many :astronaut_missions
+  have_many :astronauts
+
+  validates_presence_of :title
+  validates_presence_of  :time_in_space
+
 end
